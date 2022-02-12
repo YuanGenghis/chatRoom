@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito",sans-serif;
+}
+
+body {
+    background: linear-gradient(0.25turn, #3f87a6, #a5aaa1, #f69d3c);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(100vw, 1fr);
+    grid-template-rows: minmax(100vh, 1fr);
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+
+
+
+form {
+    padding: 7px;
+}
+
+input {
+    width: 89%;
+    padding: 13px;
+    margin: 1px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: steelblue;
+    color: whitesmoke;
+}
+
+ul {
+    padding: 10px;
+}
+
+h4 {
+    padding: 0 0 10px 0;
+}
+li {
+   color: #54b517
+}
+
+p {
+    color: #000000
+}
+
+.join-header {
+    color: #ffffff
+}
+.form-control {
+    padding-bottom: 10px;
+}
+.btn {
+    position: relative;
+    left: 9em;
+}
+
+#chatroom-container {
+    display: grid;  
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;  
+    grid-template-rows:     1fr 1fr 1fr 1fr 1fr 60px;  
+    grid-template-areas:  
+    "cb cb cb cb ul ul"  
+    "cb cb cb cb ul ul"
+    "cb cb cb cb ul ul"  
+    "cb cb cb cb ul ul" 
+    "cb cb cb cb ul ul" 
+    "c c c c ul ul";
+    background-color: rgb(213, 223, 228);
+    min-width: 800px;
+    max-width: 1100px;
+    max-height: 800px;
+    height: 75vh;
+    padding: 10px;
+    border-radius: 25px;
+    grid-gap: 10px;
+}
+
+#chat-box,
+#active-user-list,
+#chat-bar {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 25px;
+}
+#chat-box {
+    grid-area: cb;
+    overflow-y: scroll;
+}
+
+#active-user-list {
+    grid-area: ul;
+}
+
+#chat-bar {
+    grid-area: c;
+    text-align: center;
+    padding: 0;
+}
+
+
+#chat-box-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: powderblue;
+	border-radius: 5px;
+    overflow-wrap: break-word;
+    list-style-type: none;
+}
+
+#chat-box-messages .message:nth-child(even) {
+
+	background-color: #f69d3cd1;
+}
+
+#chat-box-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+#chat-box-messages .message .meta span {
+	color: #777;
+}

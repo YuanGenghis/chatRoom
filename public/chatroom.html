@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Express-SocketIO Chat App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="chatroom-container">
+            <div id="chat-box">
+                <ul id='chat-box-messages'></ul>
+            </div>
+            <div id="active-user-list">
+                <ul><h4>Users</h4>
+                    <li>test user1</li>
+                    <li>test user2</li>
+                </ul>
+            </div>
+            <div id="chat-bar">
+                <form id="form" action="">
+                    <input id="message" type='text' placeholder="Enter text here.." autocomplete="off" />
+                    <button id='chat-Btn'>Send</button>
+            </div>
+        </div>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='js/main.js'></script>
+    </body>
+</html>
